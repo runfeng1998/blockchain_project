@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <%- include('partials/header.ejs') -%>
+    
+    <h2>query</h2>
+    <form action="/query" method="POST">
+        <input type='text' name='company' placeholder="company" required/>
+        <button type="submit">go</button>
+    </form>
+
+    <h2>transaction</h2>
+    <form action="/transaction" method="POST">
+        <input type='text' name='A_com' placeholder="A company" required/>
+        <input type='text' name='B_com' placeholder="B company" required/>
+        <input type='number' name='money' placeholder="money" required/>
+        <button type="submit">go</button>
+    </form>
+
+    <h2>Bank financing</h2>
+    <form action="/finance" method="POST">
+        <input type='text' name='A_com' placeholder="A company" required/>
+        <input type='number' name='money' placeholder="money" required/>
+        <button type="submit">go</button>
+    </form>
+
+    <h2>pay the bill</h2>
+    <form action="/pay_bill" method="POST">
+        <input type='text' name='A_com' placeholder="A company" required/>
+        <input type='text' name='B_com' placeholder="B company" required/>
+        <input type='number' name='money' placeholder="money" required/>
+        <button type="submit">go</button>
+    </form>
+
+    <h2>message</h2>
+    <text style="color:red">
+        <%= msg %>
+    </text>
+</body>
+</html>
